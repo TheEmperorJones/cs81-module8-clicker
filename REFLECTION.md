@@ -1,4 +1,4 @@
-# REFLECTION on *cookieClicker.js*
+# REFLECTION on *cookieClicker.html*
 
 ## What helped you understand DOM interaction best?
 
@@ -11,7 +11,7 @@
 - The most challenging element was recollecting all that I had used before, pulling it together in concert.  And it was the little conceptual details that tripped me up, formatting and proper syntax and so forth.
 
 ## What personal twist did you add?
-- A very minor twist I added was defaulting the milestone div to a sort of visual joke about the fortune cookie emoji being used.  After the first few clicks, it says "I see a lot of cookies in your future ..." until the 5th click hits, and then it is blank until the first actual milestone is called at `i = 10`.
+- A very minor twist I added was defaulting the milestone div to a sort of visual joke about the fortune cookie emoji being used.  After the first few clicks, it says "I see a lot of cookies in your future ..." until the 5th click hits, and then it is blank until the first actual milestone is called at `i = 10`.  Later, I added color changes at every milestone, per suggestion; it really increased the overall enjoyment of the page.
 
 ## What real-world app uses this kind of interaction?
 - Virtually all e-commerce relies on click events updating visually on a page.  Even RCE's at their core have similar functionality, using icons to call functions that  arrange text strings and mark them up.  Arguably, on the web, almost all but the most sparsely designed (and studiously non-updated) websites benefit from JavaScript relating to HTML via the DOM (or BOM).
