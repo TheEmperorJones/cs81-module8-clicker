@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cookie Clicker</title>
 </head>
+<!-- Minor style tweaks for visual interest -->
 <style>
     body 
     {
@@ -13,47 +14,55 @@
 </style>
 <body>
 
+<!-- Established the objects -->
 <div id="counter" style="font-size: 4rem; border: 10px solid black; margin-bottom: 20px;">Click cookie to begin!</div>
 <div id="button" style="font-size: 5rem;">🥠</div>
 <div id="milestones"></div>
 
 
-
 <script>
-
+// Declaration of constants
     let count = 0; 
 
     const button = document.getElementById("button");
     const counter = document.getElementById("counter");
     const milestones = document.getElementById("milestones");
 
+// Adding the event listener with a simple iterator inside it
     button.addEventListener("click", () => {
         count = count + 1; 
         counter.innerText = "Cookies counted: " + count;
         printStatus(count);
     });
 
+// Last-minute edition, added background color changes to the printStatus text for milestones
 function printStatus(count) {
   let result;
+  let bgColor;
+
+// Initially added these milestones in reverse order and it broke; need to remember to add from largest
+// and then decreasing toward the base "else" statement.
   if (count >= 100) {
     result = "I thought you would never reach this moment.  Congratulations on your 100th cookie click!";
+    bgColor = "gold";
   } else if (count >= 50) {
     result = "Your purported love for cookies is scarcely evident in your click speed, good soul.";
+    bgColor = "lightgreen";
   } else if (count >= 25) {
     result = "Now you are getting somewhere.  One might believe you a budding cookie enthusiast.";
-  } else if (count >=10) {
+    bgColor = "lightblue";
+} else if (count >=10) {
     result = "A good start, but your enthusiasm for cookies seems stunted.";
-  } else if (count >=5) {
+    bgColor = "lightcoral";
+} else if (count >=5) {
     result = "";
-  } else  {
+} else  {
     result ="I see a lot of cookies in your future ...";
+    bgColor = "darkorange";
     }
     milestones.innerText = result;
+    document.body.style.backgroundColor = bgColor;
   }  
-
-
-
-
 </script>
 </body>
 </html>
